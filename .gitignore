@@ -1,0 +1,17 @@
+# Google OAuth 認証情報（絶対にコミットしない）
+client_secret_*.json
+token.json
+
+# 環境変数
+.env
+.env.local
+
+# Node
+node_modules/
+
+# TypeScript ビルド成果物
+dist/
+
+# ログ・一時ファイル
+*.log
+tmp/

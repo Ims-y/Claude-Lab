@@ -1,0 +1,23 @@
+{
+  "name": "super-summary-system",
+  "version": "0.1.0",
+  "description": "Advanced text summarization system powered by Claude API",
+  "type": "module",
+  "scripts": {
+    "デモ": "tsx src/デモ実行.ts",
+    "監視開始": "tsx src/フォルダ監視モード.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.95.0",
+    "chokidar": "^5.0.0",
+    "p-limit": "^7.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
