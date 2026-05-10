@@ -12,6 +12,10 @@ node_modules/
 # TypeScript ビルド成果物
 dist/
 
+# Python
+__pycache__/
+*.pyc
+
 # ログ・一時ファイル
 *.log
 tmp/
