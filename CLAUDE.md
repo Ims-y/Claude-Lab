@@ -7,6 +7,10 @@
 - ctx_index に token.json・client_secret_*.json・GEMINI_API_KEY の内容を絶対に渡すな
 - Bashコマンドでトークン・APIキーの値がstderrに出力される可能性がある場合は実行前に警告せよ
 - 認証情報ファイルは常にパスのみで参照し、中身をツールの引数に展開するな
+- `~/.context-mode` ディレクトリが新規作成された場合、直ちに以下を実行せよ：
+  ```bash
+  chmod 700 ~/.context-mode && chmod 600 ~/.context-mode/**/*.db
+  ```
 
 ---
 
