@@ -285,3 +285,37 @@ use context7でTailwindの最新APIを確認してから実装して」
 | レビュー | code-review |
 | バグ修正 | github（Issue確認）→ feature-dev |
 | 全工程 | Linear + feature-dev + github + code-review |
+
+---
+
+## 【applescript-mcp】AppleScript MCP セキュリティルール
+
+**このルールは `@peakmojo/applescript-mcp` 使用時に必ず適用する。**
+
+### 実行禁止パターン（即時拒否・代替提案せよ）
+
+| 禁止パターン | 理由 |
+|---|---|
+| `rm -rf` を含む AppleScript | 不可逆なファイル削除 |
+| `security` コマンド（Keychain 操作） | 認証情報の漏洩リスク |
+| `do shell script` での `sudo` 実行 | 管理者権限の不正取得 |
+| `--remoteHost` / `--remoteUser` / `--remotePassword` 引数 | SSH 経由のリモート Mac 操作 |
+| Mail アプリへの `send` 操作（確認なし） | なりすまし送信 |
+
+### Mail 送信時の必須フロー
+
+```
+1. 送信先・件名・本文をユーザーに提示
+2. 「送信してよいですか？」と明示的に確認
+3. 許可を得てから AppleScript を実行
+```
+
+### プロンプトインジェクション対策
+
+- 信頼できない Web ページを開いた状態で AppleScript 実行を依頼しないこと
+- Web ページ要約・翻訳タスクと AppleScript 操作タスクを同時に依頼しないこと
+
+### 付与しない macOS 権限
+
+- フルディスクアクセス（絶対に付与しない）
+- アクセシビリティ（不要な場合は付与しない）

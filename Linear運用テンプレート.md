@@ -1,5 +1,7 @@
 # Linear運用テンプレート（動画制作）
 
+チャンネル方針・言語ルール・キャラ設定の正本は [docs/youtube/チャンネル基本設計.md](./docs/youtube/チャンネル基本設計.md)。制作分担は [docs/youtube/制作ワークフロー.md](./docs/youtube/制作ワークフロー.md)。
+
 ## 1) ステータス設計（Idea〜Review）
 
 Linearワークフローは以下で固定する。
