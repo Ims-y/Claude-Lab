@@ -37,7 +37,7 @@ claude mcp add -s user yt-analysis \
 
 # gitleaksインストール（シークレットスキャン用）
 echo "gitleaksをインストール中..."
-curl -sSfL https://raw.githubusercontent.com/gitleaks/gitleaks/main/scripts/install.sh | sh -s -- -b ~/.local/bin
+curl -sSL https://github.com/gitleaks/gitleaks/releases/download/v8.18.4/gitleaks_8.18.4_linux_x64.tar.gz | tar -xz -C ~/.local/bin gitleaks
 echo "✅ gitleaksインストール完了"
 
 echo "✅ MCP設置完了"
