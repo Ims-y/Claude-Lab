@@ -319,3 +319,17 @@ use context7でTailwindの最新APIを確認してから実装して」
 
 - フルディスクアクセス（絶対に付与しない）
 - アクセシビリティ（不要な場合は付与しない）
+
+---
+
+## セキュリティ絶対ルール
+
+### キー保存の絶対ルール
+- APIキーの保存先は ~/.config/mcp-secrets/ のみ
+- Brain/（Obsidian同期対象）にキーを絶対に書かない
+- .env.exampleにはプレースホルダーのみ（your-api-key-here）
+
+### コミット前チェック
+- git add前にAPIキーが含まれていないか必ず確認
+- git commit --no-verify は絶対に使用しない
+- 迷ったらコミットせずゆうすけに確認する
