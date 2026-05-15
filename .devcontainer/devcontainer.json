@@ -1,9 +1,9 @@
 {
     "name": "Claude-Code-Sandbox",
     "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
-    "postCreateCommand": "npm install -g @anthropic-ai/claude-code",
+    "postCreateCommand": "npm install -g @anthropic-ai/claude-code && bash /workspaces/Claude-Lab/.devcontainer/setup-mcps.sh",
     "mounts": [
         "source=/Users/ims/Documents/Brain,target=/home/node/Brain,type=bind",
-        "source=${localEnv:HOME}/Obsidian,target=/home/node/Obsidian,type=bind,consistency=cached"
+        "source=/Users/ims/.config/mcp-secrets,target=/home/node/.config/mcp-secrets,type=bind"
     ]
 }

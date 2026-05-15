@@ -13,15 +13,15 @@ fi
 source "$ENV_FILE"
 echo "MCPをインストール中..."
 
-claude mcp add brave-search \
+claude mcp add -s user brave-search \
   -e BRAVE_API_KEY=$BRAVE_API_KEY \
   -- npx -y @modelcontextprotocol/server-brave-search
 
-claude mcp add firecrawl \
+claude mcp add -s user firecrawl \
   -e FIRECRAWL_API_KEY=$FIRECRAWL_API_KEY \
   -- npx -y firecrawl-mcp
 
-claude mcp add memory \
+claude mcp add -s user memory \
   -- npx -y @modelcontextprotocol/server-memory
 
 # yt-analysisのビルド（nodeユーザー所有ディレクトリ）
@@ -31,7 +31,7 @@ if [ ! -f "$YT_DIR/dist/index.js" ]; then
   cd "$YT_DIR" && pnpm install && pnpm build
 fi
 
-claude mcp add yt-analysis \
+claude mcp add -s user yt-analysis \
   -e GEMINI_API_KEY=$GEMINI_API_KEY \
   -- node "$YT_DIR/dist/index.js"
 
