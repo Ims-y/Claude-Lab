@@ -19,3 +19,8 @@ __pycache__/
 # ログ・一時ファイル
 *.log
 tmp/
+
+# MCP APIキー（iCloud対象外の~/.config/に置くが念のため除外）
+.config/mcp-secrets/
+mcp-keys.env
+.env.example
