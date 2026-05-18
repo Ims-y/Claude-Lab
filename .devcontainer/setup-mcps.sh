@@ -35,6 +35,9 @@ claude mcp add -s user yt-analysis \
   -e GEMINI_API_KEY=$GEMINI_API_KEY \
   -- node "$YT_DIR/dist/index.js"
 
+claude mcp add -s user context7 \
+  -- /usr/local/bin/node /usr/local/share/npm-global/lib/node_modules/@upstash/context7-mcp/dist/index.js
+
 # gitleaksインストール（シークレットスキャン用）
 echo "gitleaksをインストール中..."
 curl -sSL https://github.com/gitleaks/gitleaks/releases/download/v8.18.4/gitleaks_8.18.4_linux_x64.tar.gz | tar -xz -C ~/.local/bin gitleaks
