@@ -1,6 +1,9 @@
 {
     "name": "Claude-Code-Sandbox",
     "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+    "features": {
+        "ghcr.io/devcontainers/features/github-cli:1": {}
+    },
     "postCreateCommand": "npm install -g @anthropic-ai/claude-code && bash /workspaces/Claude-Lab/.devcontainer/setup-mcps.sh",
     "mounts": [
         "source=/Users/ims/Documents/Brain,target=/home/node/Brain,type=bind",
