@@ -46,7 +46,10 @@
       "mcp__brave-search__brave_web_search",
       "mcp__firecrawl__firecrawl_scrape",
       "mcp__firecrawl__firecrawl_search",
-      "Bash(apt-get install *)"
+      "Bash(apt-get install *)",
+      "mcp__yt-analysis__summarize_video",
+      "mcp__yt-analysis__ask_about_video",
+      "mcp__memory__create_entities"
     ]
   }
 }
